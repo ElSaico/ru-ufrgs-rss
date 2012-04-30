@@ -1,0 +1,8 @@
+Flask==0.8
+Jinja2==2.6
+PyRSS2Gen==1.0.0
+Werkzeug==0.8.3
+beautifulsoup4==4.0.5
+distribute==0.6.24
+html5lib==0.95
+wsgiref==0.1.2
