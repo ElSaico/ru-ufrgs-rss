@@ -10,8 +10,8 @@ app = Flask(__name__)
 
 @app.route('/ru')
 def ru_ufrgs():
-	WEEK_DAYS = ('Segunda-feira', 'Terça-feira', 'Quarta-feira',
-	             'Quinta-feira', 'Sexta-feira', 'Sábado', 'Domingo')
+	WEEK_DAYS = ('Segunda-feira', u'Terça-feira', 'Quarta-feira',
+	             'Quinta-feira', 'Sexta-feira', u'Sábado', 'Domingo')
 	week_day = date.today().weekday()
 	resource = urllib2.urlopen("http://www.ufrgs.br/ufrgs/ru")
 	page = BeautifulSoup(resource)
