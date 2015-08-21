@@ -1,1 +1,1 @@
-web: python tools.py
+web: python ru_ufrgs.py
