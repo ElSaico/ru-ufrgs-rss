@@ -8,7 +8,7 @@ from PyRSS2Gen import RSS2, RSSItem, Guid
 from flask import Flask, render_template
 app = Flask(__name__)
 
-@app.route('/menu.xml')
+@app.route('/ru')
 def menu():
 	resource = urllib2.urlopen("http://www.ufrgs.br/ufrgs/ru")
 	page = BeautifulSoup(resource)
@@ -20,7 +20,7 @@ def menu():
 			title = '%s - %s' % (ru_name, date.today().strftime('%d/%m/%Y')),
 			link='http://www.ufrgs.br/ufrgs/ru',
 			description=desc,
-			guid=Guid(date.today().isoformat()),
+			guid=Guid(ru_name+date.today().isoformat()),
 		))
 	feed = RSS2(
 		title=u"Cardápio do RU-UFRGS - diário",
